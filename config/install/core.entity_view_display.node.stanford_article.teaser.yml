@@ -1,11 +1,19 @@
+uuid: e433ea95-cc8e-4ea1-9ae8-90b6803d9514
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.stanford_article.field_s_article_authors
+    - field.field.node.stanford_article.field_s_article_featured_image
+    - field.field.node.stanford_article.field_s_article_paragraphs
+    - field.field.node.stanford_article.field_s_article_tags
+    - field.field.node.stanford_article.field_s_article_teaser
     - node.type.stanford_article
   module:
     - user
+_core:
+  default_config_hash: Zwoua2-ahJGM-0fVcUjCku1qzaoV4D-phLYzS1BwxEw
 id: node.stanford_article.teaser
 targetEntityType: node
 bundle: stanford_article
@@ -20,4 +28,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_s_article_authors: true
+  field_s_article_featured_image: true
+  field_s_article_paragraphs: true
+  field_s_article_tags: true
+  field_s_article_teaser: true

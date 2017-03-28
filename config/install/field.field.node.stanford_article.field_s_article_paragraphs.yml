@@ -1,3 +1,4 @@
+uuid: abf7a3e2-666b-4f72-9d9f-f50058699ae2
 langcode: en
 status: true
 dependencies:
@@ -10,6 +11,8 @@ dependencies:
     - paragraphs.paragraphs_type.stanford_wysiwyg
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: w7vuec1NBL5CIf9HAKKrG4F5rNjSi1NwKDUVjVvlvf4
 id: node.stanford_article.field_s_article_paragraphs
 field_name: field_s_article_paragraphs
 entity_type: node

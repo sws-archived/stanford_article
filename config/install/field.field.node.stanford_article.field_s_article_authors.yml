@@ -1,9 +1,12 @@
+uuid: a8e668a8-f2f8-4895-b81f-62107995b137
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_s_article_authors
     - node.type.stanford_article
+_core:
+  default_config_hash: 5nHsKHdKoqt_IeFnSjhkoJnpMAb7N-owciMjUwfNG78
 id: node.stanford_article.field_s_article_authors
 field_name: field_s_article_authors
 entity_type: node

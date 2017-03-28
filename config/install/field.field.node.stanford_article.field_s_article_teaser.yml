@@ -1,3 +1,4 @@
+uuid: db0b52a3-a318-4006-b200-2149ead2567e
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
     plain_text: '0'
+_core:
+  default_config_hash: Cp1bTnZgd40-6D_wkA7_5wU5Oxn5GyW6p56bl4wpE7s
 id: node.stanford_article.field_s_article_teaser
 field_name: field_s_article_teaser
 entity_type: node

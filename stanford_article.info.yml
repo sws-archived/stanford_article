@@ -4,13 +4,16 @@ type: module
 core: 8.x
 dependencies:
   - allowed_formats
+  - ds
   - dynamic_entity_reference
   - entity_reference_revisions
   - field
+  - field_group
   - file
   - image
   - menu_ui
   - node
+  - panelizer
   - paragraphs
   - path
   - rdf

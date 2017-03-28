@@ -1,3 +1,4 @@
+uuid: f9479552-402f-4ec1-8ad0-ce27e39a4daf
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.stanford_article
   module:
     - dynamic_entity_reference
+_core:
+  default_config_hash: hpmL76RtD5PPevTh7JQw9UHt1xxiTVt5U0IRkGpdr7w
 id: node.stanford_article.field_s_article_tags
 field_name: field_s_article_tags
 entity_type: node

@@ -1,8 +1,11 @@
+uuid: b9ef0bb9-4253-4b10-9c86-0f7bdb537f04
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 26wt4LUpF79lihcGBLvXgk8r6b7ZNAi7ZlmzElQ6oGo
 id: node.field_s_article_authors
 field_name: field_s_article_authors
 entity_type: node

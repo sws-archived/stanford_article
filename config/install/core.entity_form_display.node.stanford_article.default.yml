@@ -1,3 +1,4 @@
+uuid: 0ebdc2cd-bb2d-403c-bd27-791d5d1d4dc5
 langcode: en
 status: true
 dependencies:
@@ -16,6 +17,8 @@ dependencies:
     - path
     - scheduler
     - text
+_core:
+  default_config_hash: lTMw5KqdS05whbDgQFlvWwq0KnaeV3rymghdzzAR69U
 id: node.stanford_article.default
 targetEntityType: node
 bundle: stanford_article

@@ -1,0 +1,270 @@
+uuid: 0632fa5e-7d5f-403f-9f8a-046109793052
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.stanford_article.field_s_article_authors
+    - field.field.node.stanford_article.field_s_article_featured_image
+    - field.field.node.stanford_article.field_s_article_paragraphs
+    - field.field.node.stanford_article.field_s_article_tags
+    - field.field.node.stanford_article.field_s_article_teaser
+    - field.field.node.stanford_article.panelizer
+    - node.type.stanford_article
+  module:
+    - ds
+    - dynamic_entity_reference
+    - entity_reference_revisions
+    - field_group
+    - image
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          61a3b26c-4db1-4c8c-a351-b3f93f3dac53:
+            id: 'entity_field:node:created'
+            label: 'Authored on'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: timestamp
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+              third_party_settings: {  }
+              weight: 0
+            region: first
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 61a3b26c-4db1-4c8c-a351-b3f93f3dac53
+          d613120d-be97-49f7-a681-4536a256fc7a:
+            id: 'entity_field:node:field_s_article_featured_image'
+            label: 'Featured Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: responsive_image
+              settings:
+                responsive_image_style: wide
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+            region: hero
+            weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: d613120d-be97-49f7-a681-4536a256fc7a
+          9172ad88-d258-4d64-b31f-6062aeeb6a42:
+            id: 'entity_field:node:field_s_article_paragraphs'
+            label: Paragraphs
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: default
+                link: ''
+              third_party_settings: {  }
+              weight: 0
+            region: full
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 9172ad88-d258-4d64-b31f-6062aeeb6a42
+          eba2c64f-a6b5-4ce1-886b-961f98692e65:
+            id: 'entity_field:node:field_s_article_tags'
+            label: Tags
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: dynamic_entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+            region: first
+            weight: 2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: eba2c64f-a6b5-4ce1-886b-961f98692e65
+          d86f62c8-bba6-41c1-8763-cbbd43b72ffe:
+            id: 'entity_field:node:field_s_article_teaser'
+            label: Teaser
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: hero
+            weight: -1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: d86f62c8-bba6-41c1-8763-cbbd43b72ffe
+          1e083884-1075-44f0-8d7a-b55ff98c9f87:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: hero
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 1e083884-1075-44f0-8d7a-b55ff98c9f87
+        id: panels_variant
+        label: Default
+        uuid: ec5a72c5-f6b8-4400-a59e-f8c60fcc6713
+        weight: 0
+        layout: bricks
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:stanford_article:full:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+  ds:
+    layout:
+      id: bricks
+      path: modules/stanford/stanford_layouts/plugins/layouts/full-width/bricks
+      library: layout_plugin/bricks
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      hero:
+        - group_top_hero_image
+        - field_s_article_featured_image
+        - node_title
+        - field_s_article_teaser
+      second:
+        - field_s_article_tags
+        - node_post_date
+      full:
+        - field_s_article_paragraphs
+      first:
+        - field_s_article_authors
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 5
+        label: hidden
+        formatter: ds_post_date_long
+      node_title:
+        plugin_id: node_title
+        weight: 103
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_group:
+    group_top_hero_image:
+      children:
+        - field_s_article_featured_image
+        - node_title
+        - field_s_article_teaser
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      format_settings:
+        label: 'Top Hero Image'
+        pattern: hero_with_overlay
+        pattern_mapping:
+          'fields:field_s_article_featured_image':
+            destination: image
+            weight: 0
+            plugin: fields
+            source: field_s_article_featured_image
+          'fields:field_s_article_teaser':
+            destination: teaser
+            weight: 1
+            plugin: fields
+            source: field_s_article_teaser
+          'ds_field:node_title':
+            destination: title
+            weight: 2
+            plugin: ds_field
+            source: node_title
+      label: 'Top Hero Image'
+_core:
+  default_config_hash: iFdlxEuXoduarjodp-H8k0m8KMIG-2lQmW7DN_dknwU
+id: node.stanford_article.full
+targetEntityType: node
+bundle: stanford_article
+mode: full
+content:
+  field_s_article_authors:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_s_article_featured_image:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_s_article_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_s_article_tags:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: dynamic_entity_reference_label
+  field_s_article_teaser:
+    weight: 104
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  title:
+    label: hidden
+    type: string
+    weight: 140
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  links: true
+  panelizer: true
