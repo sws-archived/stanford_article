@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.stanford_article
+  module:
+    - user
+id: node.stanford_article.teaser
+targetEntityType: node
+bundle: stanford_article
+mode: teaser
+content:
+  links:
+    weight: 100
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }
