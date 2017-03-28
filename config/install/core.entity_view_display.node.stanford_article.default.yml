@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stanford_article.field_s_article_authors
+    - field.field.node.stanford_article.field_s_article_featured_image
+    - field.field.node.stanford_article.field_s_article_paragraphs
+    - field.field.node.stanford_article.field_s_article_tags
+    - field.field.node.stanford_article.field_s_article_teaser
+    - node.type.stanford_article
+  module:
+    - dynamic_entity_reference
+    - entity_reference_revisions
+    - image
+    - text
+    - user
+id: node.stanford_article.default
+targetEntityType: node
+bundle: stanford_article
+mode: default
+content:
+  field_s_article_authors:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_s_article_featured_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_s_article_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_s_article_tags:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: dynamic_entity_reference_label
+  field_s_article_teaser:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 100
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

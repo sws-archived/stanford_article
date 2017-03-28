@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stanford_article
+  module:
+    - node
+id: node.stanford_article
+targetEntityType: node
+bundle: stanford_article
+types:
+  - 'schema:Article'
+fieldMappings: {  }
