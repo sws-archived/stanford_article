@@ -1,6 +1,6 @@
 {
   "name": "su-sws/stanford_article",
-  "description": "Stanford Module Example for the layout_plugin",
+  "description": "Stanford Article Content Type",
   "type": "stanford-module",
   "homepage": "https://github.com/SU-SWS/stanford_article",
   "authors": [],

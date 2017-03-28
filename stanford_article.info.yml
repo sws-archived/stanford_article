@@ -1,1 +1,22 @@
-required: true
+name: 'Stanford Article'
+description: 'Provides Article content type and related configuration. Article content type using paragraphs'
+type: module
+core: 8.x
+dependencies:
+  - allowed_formats
+  - dynamic_entity_reference
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - rdf
+  - scheduler
+  - stanford_paragraph_types
+  - taxonomy
+  - text
+  - user
+version: 8.x-1.0-dev
