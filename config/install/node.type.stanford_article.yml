@@ -1,4 +1,3 @@
-uuid: 44bdf3a8-cadd-4e6a-b0f0-d463be64c8d2
 langcode: en
 status: true
 dependencies:
@@ -21,8 +20,6 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: true
-_core:
-  default_config_hash: c2l_NUHFDqbLD3oALBAkA10gVpDXYDBgSilsuFm24bI
 name: Article
 type: stanford_article
 description: 'Article content type using paragraphs'

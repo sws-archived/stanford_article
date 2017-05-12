@@ -1,6 +1,5 @@
-uuid: e433ea95-cc8e-4ea1-9ae8-90b6803d9514
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -12,8 +11,6 @@ dependencies:
     - node.type.stanford_article
   module:
     - user
-_core:
-  default_config_hash: Zwoua2-ahJGM-0fVcUjCku1qzaoV4D-phLYzS1BwxEw
 id: node.stanford_article.teaser
 targetEntityType: node
 bundle: stanford_article
@@ -21,13 +18,7 @@ mode: teaser
 content:
   links:
     weight: 100
-  title:
-    label: hidden
-    type: string
-    weight: -5
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
+    region: content
 hidden:
   field_s_article_authors: true
   field_s_article_featured_image: true

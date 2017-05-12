@@ -2,17 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_s_article_authors
+    - field.storage.node.panelizer
     - node.type.stanford_article
-id: node.stanford_article.field_s_article_authors
-field_name: field_s_article_authors
+  module:
+    - panelizer
+id: node.stanford_article.panelizer
+field_name: panelizer
 entity_type: node
 bundle: stanford_article
-label: Authors
+label: Panelizer
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: panelizer

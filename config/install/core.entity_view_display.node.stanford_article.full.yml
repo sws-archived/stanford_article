@@ -1,6 +1,5 @@
-uuid: 0632fa5e-7d5f-403f-9f8a-046109793052
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
@@ -88,8 +87,6 @@ third_party_settings:
             plugin: ds_field
             source: node_title
       label: 'Top Hero Image'
-_core:
-  default_config_hash: iFdlxEuXoduarjodp-H8k0m8KMIG-2lQmW7DN_dknwU
 id: node.stanford_article.full
 targetEntityType: node
 bundle: stanford_article
@@ -102,6 +99,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_s_article_featured_image:
     weight: 102
     label: hidden
@@ -110,6 +108,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_s_article_paragraphs:
     type: entity_reference_revisions_entity_view
     weight: 2
@@ -118,6 +117,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_s_article_tags:
     weight: 1
     label: above
@@ -125,18 +125,13 @@ content:
       link: true
     third_party_settings: {  }
     type: dynamic_entity_reference_label
+    region: content
   field_s_article_teaser:
     weight: 104
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  title:
-    label: hidden
-    type: string
-    weight: 140
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
+    region: content
 hidden:
   links: true

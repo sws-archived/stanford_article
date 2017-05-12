@@ -1,4 +1,3 @@
-uuid: 138bf5a9-7ae0-4545-9573-84ac8828910c
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - node.type.stanford_article
   module:
     - node
-_core:
-  default_config_hash: aAxMoY-uNBTHdelacMH7oXvcDcixCllSLjGQq4fzDZU
 id: node.stanford_article
 targetEntityType: node
 bundle: stanford_article

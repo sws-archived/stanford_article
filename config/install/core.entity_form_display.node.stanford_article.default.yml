@@ -1,4 +1,3 @@
-uuid: 0ebdc2cd-bb2d-403c-bd27-791d5d1d4dc5
 langcode: en
 status: true
 dependencies:
@@ -17,8 +16,6 @@ dependencies:
     - path
     - scheduler
     - text
-_core:
-  default_config_hash: lTMw5KqdS05whbDgQFlvWwq0KnaeV3rymghdzzAR69U
 id: node.stanford_article.default
 targetEntityType: node
 bundle: stanford_article
@@ -29,6 +26,7 @@ content:
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_s_article_authors:
     weight: 4
     settings:
@@ -36,6 +34,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_s_article_featured_image:
     weight: 2
     settings:
@@ -43,6 +42,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_s_article_paragraphs:
     type: entity_reference_paragraphs
     weight: 5
@@ -54,6 +54,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_s_article_tags:
     weight: 3
     settings:
@@ -62,6 +63,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: dynamic_entity_reference_default
+    region: content
   field_s_article_teaser:
     weight: 1
     settings:
@@ -69,32 +71,38 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   path:
     type: path
     weight: 11
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 8
     third_party_settings: {  }
+    region: content
   publish_on:
     type: datetime_timestamp_no_default
     weight: 12
     settings: {  }
     third_party_settings: {  }
+    region: content
   scheduler_settings:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 9
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -102,6 +110,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 6
@@ -110,9 +119,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 13
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }
