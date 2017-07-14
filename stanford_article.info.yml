@@ -18,8 +18,6 @@ dependencies:
   - path
   - rdf
   - scheduler
-  - stanford_page
-  - stanford_paragraph_types
   - taxonomy
   - text
   - user
