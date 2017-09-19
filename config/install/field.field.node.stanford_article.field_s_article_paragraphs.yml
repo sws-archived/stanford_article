@@ -6,7 +6,6 @@ dependencies:
     - node.type.stanford_article
     - paragraphs.paragraphs_type.stanford_buttons
     - paragraphs.paragraphs_type.stanford_callout_text
-    - paragraphs.paragraphs_type.stanford_hero
     - paragraphs.paragraphs_type.stanford_wysiwyg
   module:
     - entity_reference_revisions

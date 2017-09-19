@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.stanford_article.field_s_article_paragraphs
     - field.field.node.stanford_article.field_s_article_tags
     - field.field.node.stanford_article.field_s_article_teaser
+    - field.field.node.stanford_article.panelizer
     - image.style.thumbnail
     - node.type.stanford_article
   module:
@@ -126,4 +127,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  panelizer: true

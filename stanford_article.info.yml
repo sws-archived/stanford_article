@@ -19,7 +19,10 @@ dependencies:
   - rdf
   - scheduler
   - stanford_page
+  - stanford_paragraph_buttons
+  - stanford_paragraph_callout_text
   - stanford_paragraph_types
+  - stanford_paragraph_wysiwyg
   - taxonomy
   - text
   - user

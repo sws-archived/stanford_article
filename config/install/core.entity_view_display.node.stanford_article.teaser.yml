@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.stanford_article.field_s_article_paragraphs
     - field.field.node.stanford_article.field_s_article_tags
     - field.field.node.stanford_article.field_s_article_teaser
+    - field.field.node.stanford_article.panelizer
     - node.type.stanford_article
   module:
     - user
@@ -25,3 +26,4 @@ hidden:
   field_s_article_paragraphs: true
   field_s_article_tags: true
   field_s_article_teaser: true
+  panelizer: true
